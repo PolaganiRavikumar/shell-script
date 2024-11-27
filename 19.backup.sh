@@ -1,8 +1,8 @@
 #!/bin/bash
-SOURCE_DIR= $1
-DES_DIR= ${2}
-DAYS= ${3:-14}
-TIMESTAMP=$(date +%y-%m-%d-%h-%m-%s)
+SOURCE_DIR=$1
+DES_DIR=${2}
+DAYS=${3:-14}
+TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 R="\e[31m"
 G="\e[32m"
@@ -12,7 +12,6 @@ USAGE()
 {
    echo -e "$R USAGE:: $N sh 19.backup.sh <source> <destination> <days(optional)>"
 }
-
 # check the source and destination is provided 
 if [ $# -lt 2 ]
 then 
