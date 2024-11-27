@@ -1,9 +1,10 @@
 #!/bin/bash
+
 DISK_USAGE=$(df-hT | grep xfs)
 DISK_THRESHOLD=5
-while IFS= read -r file
+while IFS= read -r lile
 do
-    USAGE=$(echo $line | grep xfs |awk -f " " '{print $6F}'| cut -d "%" -f1)
+    USAGE=$(echo $line | grep xfs | awk -F " " '{print $6F}' | cut -d "%" -f1)
     PARTITION=$(echo $line | grep xfs | awk -F " " '{print $NF}')
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then
