@@ -16,7 +16,7 @@ fi
 FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
 echo "Files: $FILES"
 
-while IFS=read -r file
+while IFS= read -r file
 do
     echo "Deleting file: $file"
     rm -rf $file
