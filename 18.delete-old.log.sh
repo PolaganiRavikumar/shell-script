@@ -10,7 +10,7 @@ then
     echo -e "$SOURCE_DIR $G Exits $N"
 else
     echo -e "$SOURCE_DIR $R doesnot exits going to create directory$N"
-    mkdir $SOURCE_DIR
+    mkdir -p $SOURCE_DIR
 fi 
 
 FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
